@@ -1,0 +1,19 @@
+version: '3'
+services:
+  NoAuthSmtp:
+    image: axllent/mailpit
+    container_name: no_auth_smtp
+    restart: unless-stopped
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+  AuthSmtp:
+    image: axllent/mailpit
+    container_name: auth_smtp
+    restart: unless-stopped
+    command: "--smtp-auth-file /root/auth --smtp-auth-allow-insecure"
+    volumes:
+      - ./conf/auth:/root/auth
+    ports:
+      - "1026:1025"
+      - "8026:8025"        
