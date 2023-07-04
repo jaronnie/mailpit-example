@@ -90,3 +90,7 @@ func sendWithNoAuth() {
     fmt.Println("邮件发送成功")
 }
 ```
+
+## 参考
+
+[mailpit wiki](https://github.com/axllent/mailpit/wiki)
