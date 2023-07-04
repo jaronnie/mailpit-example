@@ -1,0 +1,2 @@
+# mailpit-example
+mailpit example
